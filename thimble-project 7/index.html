@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+
+   
+
+      function Roman(){
+        var number = document.getElementById("num");
+        var numbee = number.value;
+        var arr = [];
+
+        while(numbee > 0){
+          if (numbee >= 3000){
+            arr.push("MMM");
+            numbee -= 3000; 
+          }
+          else if(numbee >= 2000){
+            arr.push("MM");
+            numbee -= 2000;
+          }
+          else if(numbee >= 1000){
+            arr.push("M");
+            numbee -= 1000;
+          }
+          else if(numbee >= 900){
+            arr.push("CM");
+            numbee -= 900;
+          }
+          else if(numbee >= 800){
+            arr.push("DCCC");
+            numbee -= 800;
+          }
+          else if(numbee >= 700){
+            arr.push("DCC");
+            numbee -= 700;
+          }
+          else if(numbee >= 600){
+            arr.push("DC");
+            numbee -= 600;
+          }
+          else if(numbee >= 500){
+            arr.push("D");
+            numbee -= 500;
+          }
+          else if(numbee >= 400){
+            arr.push("CD");
+            numbee -= 400;
+          }
+          else if(numbee >= 300){
+            arr.push("CCC");
+            numbee -= 300;
+          }
+          else if(numbee >= 200){
+            arr.push("CC");
+            numbee -= 200;
+          }
+          else if(numbee >= 100){
+            arr.push("C");
+            numbee -= 100;
+          }
+          else if(numbee >= 90){
+            arr.push("XC");
+            numbee -= 90;
+          }
+          else if(numbee >= 80){
+            arr.push("LXXX");
+            numbee -= 80;
+          }
+          else if(numbee >= 70){
+            arr.push("LXX");
+            numbee -= 70;
+          }
+          else if(numbee >= 60){
+            arr.push("LX");
+            numbee -= 60;
+          }
+          else if(numbee >= 50){
+            arr.push("L");
+            numbee -= 50;
+          }
+          else if(numbee >= 40){
+            arr.push("XL");
+            numbee -= 40;
+          }
+          else if(numbee >= 30){
+            arr.push("XXX");
+            numbee -= 30;
+          }
+          else if(numbee >= 20){
+            arr.push("XX");
+            numbee -= 20;
+          }
+          else if(numbee >= 10){
+            arr.push("X");
+            numbee -= 10;
+          }
+          else if(numbee >= 9){
+            arr.push("IX");
+            numbee -= 9;
+          }
+          else if(numbee >= 8){
+            arr.push("VIII");
+            numbee -= 8;
+          }
+          else if(numbee >= 7){
+            arr.push("VII");
+            numbee -= 7;
+          }
+          else if(numbee >= 6){
+            arr.push("VI");
+            numbee -= 6;
+          }
+          else if(numbee >= 5){
+            arr.push("V");
+            numbee -= 5;
+          }
+          else if(numbee >= 4){
+            arr.push("IV");
+            numbee -= 4;
+          }
+          else if(numbee >= 3){
+            arr.push("III");
+            numbee -= 3;
+          }
+          else if(numbee >= 2){
+            arr.push("II");
+            numbee -= 2;
+          }
+          else if(numbee >= 1){
+            arr.push("I");
+            numbee -= 1;
+          }
+
+
+        }
+
+     
+
+        return document.getElementById("ans").innerHTML = arr.join("");
+
+      }
+
+
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Decimal to Roman</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <center>
+    <h1>Decimal To Roman</h1>
+      <input type="text" id="num" placeholder="Value">
+      <button onclick="Roman()">Check</button>
+      <h2 id="ans"></h2>
+    </center>
+  
+  </body>
+
+</html>
